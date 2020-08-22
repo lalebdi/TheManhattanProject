@@ -1,0 +1,16 @@
+html{
+    margin-left: 20vw;
+    --prim-color: #264e70;
+    color: aliceblue;
+}
+
+button{
+    background: #ef6c57;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: azure;
+    font: normal bold 18px "Open Sans", sans-serif;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
