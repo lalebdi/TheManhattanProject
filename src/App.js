@@ -1,8 +1,10 @@
 import React from 'react';
 import Login from './Views/Login/Login.jsx';
 import { useSelector } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SideBar from './Views/Sidebar/SideBar.jsx';
+import ViewBugs from './Views/Pages/ViewBugs.jsx';
+
 
 function App() {
   const { auth } = useSelector(state => state) // to define the login status
@@ -11,6 +13,12 @@ function App() {
       { !auth.LoggedIn ? <Login /> :
       <>
       <SideBar />
+      <Switch>
+        <Route path="/viewbugs">
+        <ViewBugs />
+        </Route>
+      </Switch>
+      
       </>
       }
     </Router>

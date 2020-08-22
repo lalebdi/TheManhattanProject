@@ -3,7 +3,7 @@ export default bug;
 //  Below I'm defining the layout data and make it into a model to be used everywhere.
 function bug(bug){
     if(bug !== undefined){
-        this._id = bug._id;
+        this.id = bug.id;
         this.name = bug.name;
         this.details = bug.details;
         this.steps = bug.steps;

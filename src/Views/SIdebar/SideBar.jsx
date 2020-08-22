@@ -14,7 +14,7 @@ const SideBar = () => {
     }
     return (
         <div className="sidebar" >
-            <Link classNmae="nav-link" to="/">
+            <Link className="nav-link" to="/">
                 <h1 className="brand">
                     Bug-Tracker
                 </h1>
