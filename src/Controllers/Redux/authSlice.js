@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'; // will have our reducesers 
+import { createSlice } from '@reduxjs/toolkit'; // will have our reducesers  combined
 
 const slice = createSlice({
     name: "auth", 
@@ -7,12 +7,12 @@ const slice = createSlice({
         LoggedIn: false
     },
     reducers: {
-        reducers: {
+        
             signIn:(state,action)=>{
                 const { name, password } = action.payload;
                 state.LoggedIn= true;
                 state.admin = true;
-                // console.log(state)
+                console.log(state)
             },
             signOut:(state)=>{
                 state.LoggedIn = false;
@@ -22,7 +22,7 @@ const slice = createSlice({
 
             }
 
-        }
+        
     }
 })
 

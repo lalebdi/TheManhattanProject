@@ -1,7 +1,9 @@
-html{
-    margin-left: 20vw;
+#root{
+    display: grid;
+    grid-template-columns: 20% 80%;
     --prim-color: #264e70;
     color: aliceblue;
+    margin: -8px;
 }
 
 button{
