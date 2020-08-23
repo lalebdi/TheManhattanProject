@@ -39,7 +39,7 @@ const BugView = (props) => {
             dispatch(markComplete())
         }}> Mark Complete </button>
         </div>
-        { displayEdit && <EditBug title="Edit Bug" bug={bug} />}
+        { displayEdit && <EditBug title="Edit Bug" bug={bug} close={editClicked} />}
         </>
     )
 }
