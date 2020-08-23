@@ -22,7 +22,7 @@ const Dashboard = () => {
     }
 
     useEffect(() =>{
-        dispatch(getBugs) // the getBugs
+        dispatch(getBugs()) // the getBugs
 
     }, [bugs == undefined]) // it will update the state and useEffect runs eveytime the state is updated. So, only runs if the state is undefined.
     return (
