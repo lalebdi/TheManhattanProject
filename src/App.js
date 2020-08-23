@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SideBar from './Views/Sidebar/SideBar.jsx';
 import ViewBugs from './Views/Pages/ViewBugs.jsx';
 import BugForm from './Views/Components/Bug Create and Edit/BugForm';
+import Dashboard from './Views/Pages/Dashboard/Dashboard';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <>
       <SideBar />
       <Switch>
+      <Route path="/"><Dashboard /></Route>
         <Route path="/viewbugs"><ViewBugs /></Route>
         <Route path="/create"> 
         <div className="page-container">
