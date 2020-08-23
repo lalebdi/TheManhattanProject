@@ -1,0 +1,10 @@
+.bug-create{
+    width: 60vw;
+    background-color: var(--prim-color);
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 10;
+}
