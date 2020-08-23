@@ -1,18 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ViewSection from './component/BugViewSecton';
 import BugModel from '../../../Models/BugModel';
 import { useDispatch } from 'react-redux';
 import { markComplete } from '../../../Controllers/Redux/bugSlice';
 import EditPanel from '../Edit Delete/EditPanel';
+import EditBug from '../Bug Create and Edit/BugForm';
 import './BugView.css';
 
 const BugView = (props) => {
     const dispatch = useDispatch();
     const bug = new BugModel(props.bug);
 
+    const [displayEdit, setDisplayEdit] = useState(false);
+
+    function editClicked(){
+        setDisplayEdit(!displayEdit)
+    }
+
+    function deleteClicked(){
+
+    }
+
     return (
+        <>
         <div className="bug-view">
-            <EditPanel />
+            <EditPanel editClicked={editClicked} deleteClicked={deleteClicked} />
             <button className="close-btn" onClick={props.clicked}> Close </button>
             <h1>
                 {bug.name}
@@ -27,6 +39,8 @@ const BugView = (props) => {
             dispatch(markComplete())
         }}> Mark Complete </button>
         </div>
+        { displayEdit && <EditBug title="Edit Bug" bug={bug} />}
+        </>
     )
 }
 

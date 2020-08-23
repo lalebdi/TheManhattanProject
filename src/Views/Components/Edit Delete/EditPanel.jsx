@@ -1,11 +1,11 @@
 import React from 'react';
 import './EditPanel.css';
 
-const EditPanel = () => {
+const EditPanel = (props) => {
     return (
         <div className="edit-panel">
-            <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={props.editClicked} >Edit</button>
+            <button onClick={props.deleteClicked} >Delete</button>
         </div>
     )
 }
