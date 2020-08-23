@@ -16,7 +16,7 @@ function App() {
       <>
       <SideBar />
       <Switch>
-      <Route path="/"><Dashboard /></Route>
+      <Route exact path="/"><Dashboard /></Route>
         <Route path="/viewbugs"><ViewBugs /></Route>
         <Route path="/create"> 
         <div className="page-container">
