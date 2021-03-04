@@ -63,7 +63,7 @@ The backend of the project is located at [here](https://github.com/lalebdi/TheMa
 
 1. Clone the repo
 ```sh
-git clone https://github.com/lalebdi/TheManhattanProject
+git clone https://github.com/lalebdi/TheManhattanProject.git
 ```
 2. Install NPM packages
 ```sh
